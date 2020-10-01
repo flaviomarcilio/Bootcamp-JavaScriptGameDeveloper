@@ -1,0 +1,6 @@
+texto para testes: https://lipsum.com/feed/html
+imagens: https://unsplash.com/
+otimização de imagens: https://tinypng.com/
+
+Curso HTML: https://developer.mozilla.org/pt-BR/docs/Web/HTML
+Curso CSS: https://developer.mozilla.org/pt-BR/docs/Web/CSS

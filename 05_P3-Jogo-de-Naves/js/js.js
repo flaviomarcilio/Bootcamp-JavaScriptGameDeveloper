@@ -6,6 +6,7 @@ function start() { // Inicio da função start()
 	$("#fundoGame").append("<div id='inimigo1' class='anima2'></div>");
 	$("#fundoGame").append("<div id='inimigo2'></div>");
 	$("#fundoGame").append("<div id='amigo' class='anima3'></div>");
+	$("#fundoGame").append("<div id='placar'></div>");
 
 	//Principais variáveis do jogo
 	var jogo = {}
@@ -18,6 +19,9 @@ function start() { // Inicio da função start()
 	}
 	var podeAtirar = true;
 	var fimdejogo = false;
+	var pontos = 0;
+	var salvos = 0;
+	var perdidos = 0;
 
 	jogo.pressionou = [];
 
@@ -40,6 +44,7 @@ function start() { // Inicio da função start()
 		moveinimigo2();
 		moveamigo();
 		colisao();
+		placar();
 	} // Fim da função loop()
 
 	//Função que movimenta o fundo do jogo
@@ -180,6 +185,8 @@ function start() { // Inicio da função start()
 			posicaoY = parseInt(Math.random() * 334);
 			$("#inimigo1").css("left", 694);
 			$("#inimigo1").css("top", posicaoY);
+			
+			pontos = pontos + 100;
 		}
 
 		// Disparo com o inimigo2
@@ -192,12 +199,15 @@ function start() { // Inicio da função start()
 			$("#disparo").css("left", 950);
 			
 			reposicionaInimigo2();
+
+			pontos = pontos + 50;
 		}
 
 		// jogador com o amigo
 		if (colisao5.length > 0) {
 			reposicionaAmigo();
 			$("#amigo").remove();
+			salvos++;
 		}
 
 		//Inimigo2 com o amigo
@@ -208,7 +218,9 @@ function start() { // Inicio da função start()
 			explosao3(amigoX, amigoY);
 			$("#amigo").remove();
 					
-			reposicionaAmigo();		
+			reposicionaAmigo();
+			
+			perdidos++;
 		}
 
 	} //Fim da função colisao()
@@ -299,4 +311,9 @@ function start() { // Inicio da função start()
 		
 	} // Fim da função reposicionaAmigo()
 
+	//Placar
+	function placar() {
+		$("#placar").html("<h2> Pontos: " + pontos + " Salvos: " + salvos + " Perdidos: " + perdidos + "</h2>");
+	} //fim da função placar()
+	
 } // Fim da função start

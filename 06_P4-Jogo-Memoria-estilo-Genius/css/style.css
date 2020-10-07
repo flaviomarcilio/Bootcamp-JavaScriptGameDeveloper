@@ -33,11 +33,13 @@ body{
     background-color: red;
     border-top-right-radius: 100%;
 }
+
 .yellow{
     grid-area: amarelo;
     background-color: yellow;
     border-bottom-left-radius: 100%;
 }
+
 .green{
     grid-area: verde;
     background-color: green;
@@ -45,5 +47,5 @@ body{
 }
 
 .selected{
-    opacity: 0.8;
+    opacity: 0.5;
 }

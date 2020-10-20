@@ -33,7 +33,7 @@ function start() { // Inicio da função start()
 	var somResgate = document.getElementById("somResgate");
 
 	//Música em loop
-	musica.addEventListener("ended", function () {			musica.currentTime = 0; musica.play();}, false);
+	musica.addEventListener("ended", function () {musica.currentTime = 0; musica.play();}, false);
 	musica.play();
 
 	jogo.pressionou = [];
@@ -248,7 +248,7 @@ function start() { // Inicio da função start()
 	function explosao1(inimigo1X, inimigo1Y) {
 		somExplosao.play();
 		$("#fundoGame").append("<div id='explosao1'></div");
-		$("#explosao1").css("background-image", "url(/img/explosao.png)");
+		$("#explosao1").css("background-image", "url(./img/explosao.png)");
 		var div = $("#explosao1");
 		div.css("top", inimigo1Y);
 		div.css("left", inimigo1X);
@@ -268,7 +268,7 @@ function start() { // Inicio da função start()
 	function explosao2(inimigo2X, inimigo2Y) {
 		somExplosao.play();
 		$("#fundoGame").append("<div id='explosao2'></div");
-		$("#explosao2").css("background-image", "url(/img/explosao.png)");
+		$("#explosao2").css("background-image", "url(./img/explosao.png)");
 		var div2 = $("#explosao2");
 		div2.css("top", inimigo2Y);
 		div2.css("left", inimigo2X);
@@ -343,19 +343,19 @@ function start() { // Inicio da função start()
 	function energia() {
 		
 		if (energiaAtual == 3) {
-			$("#energia").css("background-image", "url(/img/energia3.png)");
+			$("#energia").css("background-image", "url(./img/energia3.png)");
 		}
 
 		if (energiaAtual == 2) {
-			$("#energia").css("background-image", "url(/img/energia2.png)");
+			$("#energia").css("background-image", "url(./img/energia2.png)");
 		}
 
 		if (energiaAtual == 1) {
-			$("#energia").css("background-image", "url(/img/energia1.png)");
+			$("#energia").css("background-image", "url(./img/energia1.png)");
 		}
 
 		if (energiaAtual == 0) {
-			$("#energia").css("background-image", "url(/img/energia0.png)");
+			$("#energia").css("background-image", "url(./img/energia0.png)");
 			
 			//Game Over
 			gameOver();

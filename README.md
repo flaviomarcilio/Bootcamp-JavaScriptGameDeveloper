@@ -1,6 +1,5 @@
-# Bootcamp - JavaScript Game Developer
-
-### <center>DIO - Digital Innovation One</center>
+<h1 align="center">Bootcamp - JavaScript Game Developer</h1>
+<h3 align="center">DIO - Digital Innovation One</h3>
 
 ## Descrição
 
